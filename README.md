@@ -1,13 +1,20 @@
 # Deep reinforcement learning for collecting bananas
 
 ## Introduction 
-This is the first project of Udacity-Deep Reinforcement Learning Course. The main goal is to train an agent via a DQN algorithm so that the yellow bananas can be collected. There are also blue bananas on the platform. They should not be collected since the reward of collecting yellow bananas is +1 where the blue bananas is -1. There are four actions in the environment: 
+This is the first project of Udacity-Deep Reinforcement Learning Course. The main goal is to train an agent via a DQN algorithm so that the yellow bananas can be collected. 
+
+DQN Banana Agent 
+:-------------------------:
+ ![](smart.gif)
+
+There are also blue bananas on the platform. They should not be collected since the reward of collecting yellow bananas is +1 where the blue bananas is -1. There are four actions in the environment: 
 - **`0`** - move forward.
 - **`1`** - move backward.
 - **`2`** - turn left.
 - **`3`** - turn right.
 
 These actions are taken by considering an input, 37-dimensional representation. This representation(state) contains information of an agent such as velocity and ray-based perception of the agent.
+
 
 ### Termination Criteria
 
