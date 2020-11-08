@@ -1,7 +1,12 @@
 # Project  Report
 
 
-In this project, the Deep Q-Networks algorithm is implemented to train an agent for navigating itself. 
+In this project, the Deep Q-Networks algorithm is implemented to train an agent for navigating itself. The below figure shows the outcome of this project via using the graphics. The agent before training is seen in the left side, and the trained one is in the right side.
+
+Random Banana Agent         |  DQN Banana Agent 
+:-------------------------:|:-------------------------:
+![](random.gif)  |  ![](smart.gif)
+
 
 ### Environment
 Unity's ML Agents package is utilized in the project to train the agent on the environment named Banana. In this environment, yellow and blue bananas are randomly placed on the platform. Moreover, position of the agent is also randomly determined. This agent perceives a 37-dimensional vector as its own state. Velocity and the ray-based observations are kept in the state.
