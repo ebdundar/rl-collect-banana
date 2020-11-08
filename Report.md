@@ -32,8 +32,15 @@ The average score value is calculated by averaging scores in the last 100 episod
 
 
 #### The learning rate effect
-A learning rate value can vary depending on what kind of task the algorithm is train on. Therefore, different values are selected for the learning rate to see how it behaves during training. We set the maximum number of episodes to 500 since our aim is to see the effect of it.
+A learning rate value can vary depending on what kind of task the algorithm is train on. Therefore, different values are selected for the learning rate to see how it behaves during training. We set the maximum number of episodes to 500 since our aim is to see the effect of it. When we observe the following figure, we see that smaller learning rates are better for learning in this task. 
 
+![LR effect](lr_effect.png)
+
+#### The buffer size effect
+Apart from the learning rate value, buffer size can also play an important role for learning. Therefore, an experiment is conducted to see whether or not is it important. We set the maximum number of episodes to 500 since our aim is to see the effect of it.
+![BUFFER effect](buffer_size_effect.png)
+
+As you can see in the above figure, decreasing the buffer size value leads to a worse performance in learning. Therefore, it can be said that if you have enough memory, then you should probably set the buffer size to a higher values.
 
 ### Conclusion
 Using Pytorch and Unity's ml-agents in this project is quite impressive. As an extension of the work done in the project, grid search can be applied to find the optimum hyperparameters.
