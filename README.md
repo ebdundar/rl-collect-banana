@@ -14,8 +14,9 @@ These actions are taken by considering an input, 37-dimensional representation. 
 The task is episodic. That means an agent should obtain an average score of +13 over 100 consecutive episodes.
 
 ## Let's go!
+At first, we should set up out python environment via following the instructions in [here](https://github.com/udacity/deep-reinforcement-learning#dependencies)
 
-At first, we should obtain the environment. Please download the appropriate version, then place it in the path of Navigation.ipynb.
+Secondly, we should obtain the environment. Please download the appropriate version, then place it in the path of Navigation.ipynb.
   - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
   - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
   - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
