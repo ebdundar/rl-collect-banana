@@ -19,14 +19,15 @@ We used the hyperparameters as the following:
   - UPDATE_EVERY = 4        # how often to update the network
   
 Our agent is capable of solving the task after the episode 508. The result of the DQN algorithm is the following:  
-  Episode 100	Average Score: 0.71  
+  > Episode 100	Average Score: 0.71  
   Episode 200	Average Score: 3.65  
   Episode 300	Average Score: 6.74  
   Episode 400	Average Score: 10.03  
   Episode 500	Average Score: 11.95  
   Episode 600	Average Score: 12.55  
   Episode 608	Average Score: 13.02  
-  Environment solved in 508 episodes!	Average Score: 13.02  
+  Environment solved in 508 episodes!	Average Score: 13.02   
+  
 The average score value is calculated by averaging scores in the last 100 episodes.
 
 
