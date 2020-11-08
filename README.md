@@ -25,7 +25,13 @@ At first, we should obtain the environment. Please download the appropriate vers
 
   (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
   
-Open the notebook named Navigation.ipynb, then execute each cell orderly to train your own agent!
+  -Open the notebook named Navigation.ipynb
+  -In the second cell, you should write your path for Banana environment that we mentioned above. 
+  -Then you may execute each cell orderly.
+  -After the seciton 4, our ml-agent is trained. If you want to use pre-trained weights, follow the below instructions.
 
-## Using a pretrained version :)
-If you are impatient, then you may use the pre-trained model parameters in the repository named checkpoint-cpu-<Learning-Rate>.pt
+## Using a pretrained version
+If you are impatient, then you may use the pre-trained model parameters in the repository named checkpoint-cpu-<Learning-Rate>.pt. All you need to do is to set USE_PRETRAIN variable to True. This variable can be found in the beginning of the 4th section in Navigation.ipynb notebook.
+  
+  
+If you are struggle to work on this project, please just open an issue. Look forward to hear about your nice experiences!
