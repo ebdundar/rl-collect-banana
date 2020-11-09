@@ -12,13 +12,12 @@ Random Banana Agent         |  DQN Banana Agent
 Unity's ML Agents package is utilized in the project to train the agent on the environment named Banana. In this environment, yellow and blue bananas are randomly placed on the platform. Moreover, position of the agent is also randomly determined. This agent perceives a 37-dimensional vector as its own state. Velocity and the ray-based observations are kept in the state. Moreover, one may use the pixels in the enviroment as the input state.
 
 ### Methodology
-The Deep Q-Networks(DQN) is an algorithm in which it is trained to find out the optimum Q values. It can bee too complex depending on a task. In this project, we keep it simple since our environment provides us state values in 37-dimensional space. DQN algorithm is implemented by using Pytorch and Python 3. The neural network consists of 3 fully connected layers followed by ReLu actiovations except the last layer. Each hidden layer contains 64 units.
+The Deep Q-Networks(DQN) is an algorithm in which it is trained to find out the optimum Q values. It can bee too complex depending on a task. In this project, we keep it simple since our environment provides us state values in 37-dimensional space. DQN algorithm is implemented by using Pytorch and Python 3. The neural network consists of 3 fully connected layers followed by ReLu actiovations except the last layer which outcomes a 4-dimensional vector for actions. Each hidden layer contains 64 units. Adam is selected as an optimizer.
 
   - Experience Replay  : Our agent takes actions orderly. Therefore, probability of selecting the next action may be affected by the previous one. To eliminate this correlation effect we utilize the replay buffer which is a fixed size buffer to store experiences.
-  - Fixed Q-Targets: Two identical Q-Networks are created for the agent: a local and a target. The local network is updated every **n** steps with parameters of the target network. In this way, similar to replay buffer, we can decrease correlation among selection of actions. 
+  - Fixed Q-Targets: Two identical Q-Networks are created for the agent: a local and a target. The local network is softly updated every **n** steps with parameters of the target network. In this way, similar to replay buffer, we can decrease correlation among selection of actions. 
 
-
-Due to simplicity of the input state and the network we mentioned above, we prefer to use CPU in order to train our agent.
+These techniques are utilized to train out banana collector agent. Due to simplicity of the input state and the network we mentioned above, we prefer to use CPU in order to train our agent.
 
 ### Results
 We used the hyperparameters as the following:
@@ -29,7 +28,7 @@ We used the hyperparameters as the following:
   - LR = 5e-4               # learning rate 
   - UPDATE_EVERY = 4        # how often to update the network
   
-Our agent is capable of solving the task after the episode 508. The result of the DQN algorithm is the following:  
+Our agent is capable of solving the task after the episode **508**. The result of the DQN algorithm is the following:  
   > Episode 100	Average Score: 0.71  
   Episode 200	Average Score: 3.65  
   Episode 300	Average Score: 6.74  
