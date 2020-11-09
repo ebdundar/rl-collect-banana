@@ -1,7 +1,7 @@
 # Project  Report
 
 
-In this project, the Deep Q-Networks algorithm is implemented to train an agent for navigating itself. The below figure shows the outcome of this project via using the graphics. The agent before training is seen in the left side, and the trained one is in the right side.
+In this project, the Deep Q-Networks algorithm named [DQN](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) is implemented to train an agent for navigating itself. The below figure shows the outcome of this project via using the graphics. The agent before training is seen in the left side, and the trained one is in the right side.
 
 Random Banana Agent         |  DQN Banana Agent 
 :-------------------------:|:-------------------------:
@@ -12,7 +12,7 @@ Random Banana Agent         |  DQN Banana Agent
 Unity's ML Agents package is utilized in the project to train the agent on the environment named Banana. In this environment, yellow and blue bananas are randomly placed on the platform. Moreover, position of the agent is also randomly determined. This agent perceives a 37-dimensional vector as its own state. Velocity and the ray-based observations are kept in the state. Moreover, one may use the pixels in the enviroment as the input state. The goal of this task is to get an average score of +13 over 100 consecutive episodes.
 
 ### Methodology
-The Deep Q-Networks(DQN) is an algorithm in which it is trained to find out the optimum Q values. It can bee too complex depending on a task. In this project, we keep it simple since our environment provides us state values in 37-dimensional space. DQN algorithm is implemented by using Pytorch and Python 3. The neural network consists of 3 fully connected layers followed by ReLu actiovations except the last layer which outcomes a 4-dimensional vector for actions. Each hidden layer contains 64 units. Adam is selected as an optimizer.
+The Deep Q-Networks is an algorithm in which it is trained to find out the optimum Q values. It can bee too complex depending on a task. In this project, we keep it simple since our environment provides us state values in 37-dimensional space. DQN algorithm is implemented by using Pytorch and Python 3. The neural network consists of 3 fully connected layers followed by ReLu actiovations except the last layer which outcomes a 4-dimensional vector for actions. Each hidden layer contains 64 units. Adam is selected as an optimizer.
 
   - Experience Replay  : Our agent takes actions orderly. Therefore, probability of selecting the next action may be affected by the previous one. To eliminate this correlation effect we utilize the replay buffer which is a fixed size buffer to store experiences.
   - Fixed Q-Targets: Two identical Q-Networks are created for the agent: a local and a target. The local network is softly updated every **n** steps with parameters of the target network. In this way, similar to replay buffer, we can decrease correlation among selection of actions. 
