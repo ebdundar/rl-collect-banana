@@ -9,10 +9,16 @@ Random Banana Agent         |  DQN Banana Agent
 
 
 ### Environment
-Unity's ML Agents package is utilized in the project to train the agent on the environment named Banana. In this environment, yellow and blue bananas are randomly placed on the platform. Moreover, position of the agent is also randomly determined. This agent perceives a 37-dimensional vector as its own state. Velocity and the ray-based observations are kept in the state.
+Unity's ML Agents package is utilized in the project to train the agent on the environment named Banana. In this environment, yellow and blue bananas are randomly placed on the platform. Moreover, position of the agent is also randomly determined. This agent perceives a 37-dimensional vector as its own state. Velocity and the ray-based observations are kept in the state. Moreover, one may use the pixels in the enviroment as the input state.
 
 ### Methodology
-The Deep Q-Networks is an algorithm in which it is trained to find out the optimum Q values. It can bee too complex depending on a task. In this project, we keep it simple since our environment provides us state values in 37-dimensional space. Moreover, one may use the pixels in the enviroment as the input state. Due to simplicity of the input state, we prefer to use CPU in order to train our agent.
+The Deep Q-Networks(DQN) is an algorithm in which it is trained to find out the optimum Q values. It can bee too complex depending on a task. In this project, we keep it simple since our environment provides us state values in 37-dimensional space. DQN algorithm is implemented by using Pytorch and Python 3. The neural network consists of 3 fully connected layers followed by ReLu actiovations except the last layer. Each hidden layer contains 64 units.
+
+  - Experience Replay  : Our agent takes actions orderly. Therefore, probability of selecting the next action may be affected by the previous one. To eliminate this correlation effect we utilize the replay buffer which is a fixed size buffer to store experiences.
+  - Fixed Q-Targets: Two identical Q-Networks are created for the agent: a local and a target. The local network is updated every **n** steps with parameters of the target network. In this way, similar to replay buffer, we can decrease correlation among selection of actions. 
+
+
+Due to simplicity of the input state and the network we mentioned above, we prefer to use CPU in order to train our agent.
 
 ### Results
 We used the hyperparameters as the following:
@@ -48,6 +54,10 @@ Apart from the learning rate value, buffer size can also play an important role 
 As you can see in the above figure, decreasing the buffer size value leads to a worse performance in learning. Therefore, it can be said that if you have enough memory, then you should probably set the buffer size to a higher values.
 
 ### Conclusion
-Using Pytorch and Unity's ml-agents in this project is quite impressive. As an extension of the work done in the project, grid search can be applied to find the optimum hyperparameters.
+Using Pytorch and Unity's ml-agents in this project is quite impressive. The followings can be done as a future work:
+
+  - Grid search can be applied to find the optimum hyperparameters
+  - Learning from pixels: instead of using ray based perception, the agent can be trained via using the pixels.
+  - Double DQN or Prioritized Experience Replay can be studied as a future work.
 
 
